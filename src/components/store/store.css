@@ -1,0 +1,22 @@
+section  {
+    width: 500px;
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 20px;
+
+}

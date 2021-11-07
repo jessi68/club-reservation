@@ -23,6 +23,9 @@ export const fireStore = firebase.firestore();
 export default firebase;
 
 export const fetchStores = async () => {
+    if(localStorage.getItem("stores")) {
+        return JSON.parse(localStorage.getItem("stores"));
+    }
     let stores = [];
     const documents = await fireStore.collection("Store").get();
     documents.forEach(querySnapShot => {
@@ -32,7 +35,13 @@ export const fetchStores = async () => {
 
     }
         );
+    
+    localStorage.setItem("stores", JSON.stringify(stores));
         
-        console.log(stores);
     return stores;
+}
+
+export const addStore = async (store) => {
+    await fireStore.collection("Store").add(store);
+    
 }
