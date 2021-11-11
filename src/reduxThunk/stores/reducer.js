@@ -80,11 +80,14 @@ export const storeReducer = handleActions({
         },
         stores: action.payload
     }),
-    [GET_STORES_FAILURE] : (state, action) => ({
+    [GET_STORES_FAILURE] : (state) => ({
         ...state,
         loading: {
             ...state.loading,
             GET_STORES: false
         }
+    }),
+    [ADD_STORE_SUCCESS]: (state) => ({
+        
     })
 }, initialState)

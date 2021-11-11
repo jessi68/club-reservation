@@ -7,6 +7,7 @@ import ReduxThunk from "redux-thunk";
 import rootReducer from './reduxThunk';
 import {Provider} from "react-redux";
 import {createStore, applyMiddleware} from "redux";
+import StoresPageForStudent from './pages/StoresPageFOrUser/WatchStoresPage';
 
 function App() {
 
@@ -15,11 +16,11 @@ function App() {
   return (
     <Provider store={store}>
     <div className="App">
-     
-        <StoresContainer></StoresContainer>
+        <StoresPageForStudent></StoresPageForStudent>
     </div>
     </Provider>
   );
 }
+
 
 export default App;

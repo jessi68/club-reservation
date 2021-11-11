@@ -1,0 +1,6 @@
+.container {
+    margin-top: 60px;
+    align-self: center;
+    flex-direction: column;
+    display: flex;
+}
