@@ -4,6 +4,7 @@ import "./DropDown.css";
 
 export default function DropDown(props) {
 
-    return (<DropDownList defaultValue={props.title} className="drop-down-list" data={props.data} onChange={e => props.changeValue(e.value)}/>
+    return (<DropDownList defaultValue={props.title} className="drop-down-list" 
+    data={props.data} onChange={e => props.changeValue(e.value)}/>
     );
 }

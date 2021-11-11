@@ -1,0 +1,49 @@
+.vertical {
+    display: flex;
+    flex-direction: vertical;
+    align-items: center;
+}
+
+img {
+    margin-top: 20px;
+    width: 400px;
+    height: 300px;
+}
+
+.store-detail {
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-top: 15px;
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.margin-bottom {
+    margin-bottom: 15px;
+}
+
+.name {
+    font-size: 15px;
+}
+
+.address {
+    font-size: 13px;
+}
+
+.time {
+    font-size: 13px;
+}
+
+.header-count {
+    font-size: 13px;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: center;
+}
+
+.margin-right {
+    margin-right: 10px;
+}

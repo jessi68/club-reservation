@@ -7,8 +7,6 @@ import "./LocationDropDown.css";
 // 도메인 명 + dropdown 이라고 하기
 export default function LocationDropDown(props) {
 
-    const dropdownRef = useRef();
-
     const campusNameToLocations = {
         "서울대학교": "서울특별시 관악구 관악로 1",
         "연세대학교": "서울특별시 서대문구 연세로 50",
@@ -19,7 +17,8 @@ export default function LocationDropDown(props) {
     const schools = ["서울대학교", "연세대학교", "건국대학교", "고려대학교"];
 
     return  (
-        <DropDown ref={dropdownRef}  title="현재 위치 선택 (학교 기준)" data={schools} changeValue={(value) => {
+        <DropDown title="현재 위치 선택 (학교 기준)" data={schools} 
+        changeValue={(value) => {
             props.choose(campusNameToLocations[value])
         }}>
         </DropDown>
