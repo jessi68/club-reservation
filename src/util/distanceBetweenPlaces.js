@@ -45,7 +45,7 @@ export const  convertAddressToCoordinate = async (currentAddr) => {
       .catch(err => console.log(err))
 }
 
-export default async function nearStores(curAddress,  stores = [], distance = 3) {
+export default async function getNearStores(curAddress,  stores = [], distance = 3) {
   
   const curCoordinate = await convertAddressToCoordinate(curAddress);
   
@@ -59,6 +59,8 @@ export default async function nearStores(curAddress,  stores = [], distance = 3)
   })
   )
 
-
-  return stores.filter(store => getDistanceFromCoordinateToKm(curCoordinate, store.coordinate) <= distance)
+  return stores.filter(store => {
+    console.log( getDistanceFromCoordinateToKm(curCoordinate, store.coordinate));
+    return getDistanceFromCoordinateToKm(curCoordinate, store.coordinate) <= distance
+  })
 }

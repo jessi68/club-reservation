@@ -1,23 +1,24 @@
 import React, { useContext, useState } from "react";
-import DropDown from "../../components/dropdown/Dropdown";
-import LocationDropDown from "../../container/LocationDropDown/LocationDropDown";
+import DropDown from "../../components/dropdown/DropDown";
+import LocationDropDown from "../../containers/LocationDropDown/LocationDropDown";
+import NearStoresContainer from "../../containers/stores/NearStoresContainer";
 import StoresContainer from "../../containers/stores/StoresContainer";
-import LocationContext from "../../context/locationContext";
 import "./WatchStoresPage.css";
 
-export default function StoresPageForStudent(){
+export default function StoresPageForStudent() {
 
     const [isSchoolChosen, chooseSchool] = useState(false);
-    // const [curLocation, chooseLocation] = useContext(LocationContext); 
+    const [curLocation, chooseLocation] = useState("");
 
     return (
-        <LocationContext.Provider value="">
-        <div className="vertical">
-                {isSchoolChosen ? <div></div>
-                : <StoresContainer></StoresContainer>}
-        </div>
-        <LocationDropDown chooseSchool={() => chooseSchool(true)}>
-        </LocationDropDown>
-        </LocationContext.Provider>
+            <div className="vertical">
+                      <LocationDropDown choose={(location) => {
+                          chooseSchool(true)
+                          chooseLocation(location);
+                      }}>
+                       </LocationDropDown>
+                    {isSchoolChosen ? <NearStoresContainer curLocation={curLocation}></NearStoresContainer>
+                    : <StoresContainer></StoresContainer>}
+            </div>
     );
 }

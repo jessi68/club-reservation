@@ -2,6 +2,7 @@ import StoreDetail from "../store/store";
 import "./stores.css";
 
 export default  function Stores({isLoaded, stores}) {
+    console.log(stores);
     return (
         <div className="container">
             {isLoaded && <h1>로딩중입니다.</h1>}
