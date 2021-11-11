@@ -3,12 +3,7 @@ import Geocode from "react-geocode";
 
 var GOOGLE_API_KEY = "AIzaSyAICYHO0YSKGy43LCRInmPoAizzniq91Aw"
 
-
-
-
-
-
-Geocode.setApiKey("AIzaSyAICYHO0YSKGy43LCRInmPoAizzniq91Aw")
+Geocode.setApiKey(GOOGLE_API_KEY)
 Geocode.setLanguage('en')
 Geocode.setRegion('es')
 Geocode.enableDebug()
@@ -48,9 +43,9 @@ export const  convertAddressToCoordinate = async (currentAddr) => {
 export default async function getNearStores(curAddress,  stores = [], distance = 3) {
   
   const curCoordinate = await convertAddressToCoordinate(curAddress);
-  
+  console.log(stores);
   await Promise.all(
- await stores.map(async (store, index) =>  {
+ stores.map(async (store, index) =>  {
   
     const coordinate = await convertAddressToCoordinate(store.address)
     console.log(coordinate)
@@ -60,7 +55,7 @@ export default async function getNearStores(curAddress,  stores = [], distance =
   )
 
   return stores.filter(store => {
-    console.log( getDistanceFromCoordinateToKm(curCoordinate, store.coordinate));
+   
     return getDistanceFromCoordinateToKm(curCoordinate, store.coordinate) <= distance
   })
 }

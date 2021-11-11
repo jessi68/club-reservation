@@ -9,12 +9,16 @@ export default function NearStoresContainer(props) {
 
     useEffect( async () => {
         const stores = await fetchStores();
+        console.log(stores);
         totalStores = stores;
         setNearStores(stores);
     }, []);
 
     useEffect(async () => {
-        console.log(props.curLocation);
+        if(totalStores.length == 0)  {
+            totalStores = await fetchStores();
+            console.log(totalStores);
+        }
         setNearStores(await getNearStores(props.curLocation, totalStores, 3));
     }, [props.curLocation]);
 
