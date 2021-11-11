@@ -7,6 +7,10 @@ export default function ReservationPage(props) {
 
     const store =  props.store;
     const allPossibleDates = Array.from({length: 31}, (_, i) => i + 1 + "일");
+    const closeTime = parseInt(store.closeTime.slice(0, 2));
+    const startTime = parseInt(store.openTime.slice(0, 2));
+    
+    const hours = Array.from({length: closeTime - startTime + 1}, (_, i) => startTime + i + "시");
     const [dates, setDates] = useState(allPossibleDates);
 
     const monthes = ["11월", "12월"];
@@ -27,10 +31,10 @@ export default function ReservationPage(props) {
                     예약 가능한 인원수: {store.headerCount}
                 </div>
                 <div className="margin-bottom">
-                   시간  선택: 
+                   날짜 선택: 
                 </div>
                 <div className="horizontal">
-                    <DropDown className="padding-right" title="월 선택" data={monthes}
+                    <DropDown className="margin-right" title="월 선택" data={monthes}
                          changeValue={(value) =>  {
                         if(value == 11) {
                             let newDates =  [...dates];
@@ -41,6 +45,13 @@ export default function ReservationPage(props) {
                         }
                     }}></DropDown>
                     <DropDown title="날짜 선택" data={dates}></DropDown>
+                </div>
+                <div className="margin-bottom">
+                   시간 선택: 
+                </div>
+                <div className="horizontal">
+                    <DropDown title="시간 선택" data={hours}></DropDown>
+                    
                 </div>
              </div>
           </div>);
