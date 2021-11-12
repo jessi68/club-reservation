@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/club-reservation/static/css/main.7f0c305c.chunk.css",
+    "main.js": "/club-reservation/static/js/main.fa4d5d52.chunk.js",
+    "main.js.map": "/club-reservation/static/js/main.fa4d5d52.chunk.js.map",
+    "runtime-main.js": "/club-reservation/static/js/runtime-main.60f6ef5a.js",
+    "runtime-main.js.map": "/club-reservation/static/js/runtime-main.60f6ef5a.js.map",
+    "static/css/2.43a347d4.chunk.css": "/club-reservation/static/css/2.43a347d4.chunk.css",
+    "static/js/2.f058f93b.chunk.js": "/club-reservation/static/js/2.f058f93b.chunk.js",
+    "static/js/2.f058f93b.chunk.js.map": "/club-reservation/static/js/2.f058f93b.chunk.js.map",
+    "static/js/3.e79d7c99.chunk.js": "/club-reservation/static/js/3.e79d7c99.chunk.js",
+    "static/js/3.e79d7c99.chunk.js.map": "/club-reservation/static/js/3.e79d7c99.chunk.js.map",
+    "index.html": "/club-reservation/index.html",
+    "static/css/2.43a347d4.chunk.css.map": "/club-reservation/static/css/2.43a347d4.chunk.css.map",
+    "static/css/main.7f0c305c.chunk.css.map": "/club-reservation/static/css/main.7f0c305c.chunk.css.map",
+    "static/js/2.f058f93b.chunk.js.LICENSE.txt": "/club-reservation/static/js/2.f058f93b.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/club-reservation/static/media/logo.6ce24c58.svg",
+    "static/media/store.7ad99b3e.jpg": "/club-reservation/static/media/store.7ad99b3e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.60f6ef5a.js",
+    "static/css/2.43a347d4.chunk.css",
+    "static/js/2.f058f93b.chunk.js",
+    "static/css/main.7f0c305c.chunk.css",
+    "static/js/main.fa4d5d52.chunk.js"
+  ]
+}
